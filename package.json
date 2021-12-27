@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
+    "dev:open": "svelte-kit dev -- --open",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
@@ -14,7 +15,8 @@
     "@sveltejs/kit": "next",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
-    "svelte": "^3.44.0"
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.1"
   },
   "type": "module"
 }

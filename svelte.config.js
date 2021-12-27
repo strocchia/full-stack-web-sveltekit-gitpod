@@ -1,7 +1,11 @@
 import adapter from '@sveltejs/adapter-auto';
+// import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+
+	// preprocess: preprocess(),
+
 	kit: {
 		adapter: adapter(),
 
@@ -9,10 +13,10 @@ const config = {
 		target: '#svelte',
 
 		vite: {
-			server: {
+      server: {
 				hmr: {
-					clientPort: process.env.HMR_PORT ? 443 : 3000,
-					host: process.env.HMR_PORT ? process.env.HMR_PORT.substring("https://".length) : "localhost"
+					clientPort: process.env.HMR_HOST ? 443: 3000,
+					host: process.env.HMR_HOST ? process.env.HMR_HOST.substring("https://".length) : "localhost"
 				}
 			}
 		}

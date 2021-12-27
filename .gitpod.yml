@@ -1,7 +1,8 @@
+---
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: npm install   # echo 'init script' # runs during prebuild
-    command: | 
+  - init: npm install
+    command: |
       export HMR_HOST=`gp url 3000`
       echo "Revving up..."
       npm run dev
@@ -15,3 +16,10 @@ vscode:
   extensions:
     - prisma.prisma
     - svelte.svelte-vscode
+    - esbenp.prettier-vscode
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
